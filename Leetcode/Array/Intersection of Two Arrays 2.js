@@ -11,9 +11,9 @@ var intersect = function(nums1, nums2) {
     nums2.forEach(num => {
         hash[num] ? hash[num]++ : hash[num] = 1
     })
-    // hash === { '2' : 2 }
+    // 위의 과정을 진행했을 때, hash는 nums2의 요소를 숫자로 다 담게 됨. hash === { '2' : 2 }
     for (let i = 0; i < nums1.length; i++){
-        //만약 hash에 nums1의 요소가 존재한다면 최소 1일 것이기에 조건으로 담.
+        //만약 hash에 nums1의 요소가 키 값으로써 존재한다면 그에 대한 밸류값은 최소 1일 것이기에 조건으로 담.
         if (hash[nums1[i]] > 0){
             //그 요소를 ar에 삽입,
             ar.push(nums1[i])
